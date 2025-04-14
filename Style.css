@@ -1,6 +1,7 @@
 ﻿<style >
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Two-tone gradient */
 }
 
 #cart {
