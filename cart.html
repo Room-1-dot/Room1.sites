@@ -136,41 +136,51 @@
     </div>
 
     <script>
-        function loadCart() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let cartItemsContainer = document.getElementById('cart-items');
-            let total = 0;
+    function loadCart() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartItemsContainer = document.getElementById('cart-items');
+        let total = 0;
 
-            cart.forEach(item => {
-                let cartItem = document.createElement('div');
-                cartItem.classList.add('cart-item');
-                cartItem.innerHTML = `
-                            <img src="https://via.placeholder.com/100" alt="${item.car}">
-                            <div class="item-details">
-                                <div class="item-name">${item.car}</div>
-                                <div class="item-price">R${item.price}</div>
-                            </div>
-                            <span class="remove-item" onclick="removeFromCart('${item.car}')">Remove</span>
-                        `;
-                cartItemsContainer.appendChild(cartItem);
-                total += item.price;
-            });
+        // Clear the cart container first
+        cartItemsContainer.innerHTML = '';
 
-            document.getElementById('total').innerText = total.toFixed(2);
-        }
+        cart.forEach(item => {
+            let cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="https://via.placeholder.com/100" alt="${item.car}">
+                <div class="item-details">
+                    <div class="item-name">${item.car}</div>
+                    <div class="item-price">R${item.price.toFixed(2)}</div>
+                </div>
+                <span class="remove-item" onclick="removeFromCart('${item.car}')">Remove</span>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+            total += item.price;
+        });
 
-        function removeFromCart(car) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart = cart.filter(item => item.car !== car);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            loadCart();  // Reload the cart to reflect the changes
-        }
+        document.getElementById('total').innerText = total.toFixed(2);
+    }
 
-        function checkout() {
-            alert("Proceeding to checkout...");
-        }
+   function removeFromCart(car) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const initialCount = cart.length;
+    cart = cart.filter(item => item.car !== car);
+    
+    if (cart.length < initialCount) {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+        alert(`${car} has been removed from your cart`);
+    } else {
+        alert('Item not found in cart');
+    }
+}
 
-        window.onload = loadCart;
-    </script>
+    function checkout() {
+        alert("Proceeding to checkout...");
+    }
+
+    window.onload = loadCart;
+</script>
 </body>
 </html>
