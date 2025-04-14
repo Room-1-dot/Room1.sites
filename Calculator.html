@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 25%;
+            max-width: 500px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #555555;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+            input:focus {
+                border-color: #555555;
+            }
+
+        button {
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: #555555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #555555;
+            }
+
+        #monthlyPayment {
+            font-weight: bold;
+            font-size: 2em;
+            color: #FF5722;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <a class="navbar-brand" href="#">Finance Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="HTMLPage1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Finance Calculator</h1>
+        <form id="financeForm">
+            <label for="loanAmount">Loan Amount (R):</label>
+            <input type="number" id="loanAmount" placeholder="Enter loan amount" required>
+            <label for="interestRate">Annual Interest Rate (%):</label>
+            <input type="number" id="interestRate" placeholder="Enter interest rate" required>
+            <label for="loanTerm">Loan Term (Months):</label>
+            <input type="number" id="loanTerm" placeholder="Enter loan term in months" required>
+            <button type="button" onclick="calculateFinance()">Calculate</button>
+        </form>
+        <h2>Monthly Payment: R<span id="monthlyPayment">0.00</span></h2>
+    </div>
+
+    <script>
+        function calculateFinance() {
+            const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+            const interestRate = parseFloat(document.getElementById("interestRate").value) / 100 / 12;
+            const loanTerm = parseInt(document.getElementById("loanTerm").value);
+
+            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm) || loanTerm <= 0) {
+                alert("Please enter valid finance details.");
+                return;
+            }
+            const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
+            document.getElementById("monthlyPayment").innerText = monthlyPayment.toFixed(2);
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
