@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|C:\\Users\\A257528\\Source\\Repos\\Room-1-dot\\Room1.sites\\AboutUs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|solutionrelative:AboutUs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|C:\\Users\\A257528\\Source\\Repos\\Room-1-dot\\Room1.sites\\HTMLPage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|solutionrelative:HTMLPage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|C:\\Users\\A257528\\Source\\Repos\\Room-1-dot\\Room1.sites\\ContactUs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|solutionrelative:ContactUs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|C:\\Users\\A257528\\Source\\Repos\\Room-1-dot\\Room1.sites\\Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|solutionrelative:Calculator.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|C:\\Users\\A257528\\Source\\Repos\\Room-1-dot\\Room1.sites\\cart.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D62585D-3C74-4C54-8955-D4A3D7580290}|Solution Items{7D62585D-3C74-4C54-8955-D4A3D7580290}|solutionrelative:cart.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HTMLPage1.html",
+              "DocumentMoniker": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\HTMLPage1.html",
+              "RelativeDocumentMoniker": "HTMLPage1.html",
+              "ToolTip": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\HTMLPage1.html",
+              "RelativeToolTip": "HTMLPage1.html",
+              "ViewState": "AQIAANsAAAAAAAAAAAAAAOgAAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-15T10:16:38.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Calculator.html",
+              "DocumentMoniker": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\Calculator.html",
+              "RelativeDocumentMoniker": "Calculator.html",
+              "ToolTip": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\Calculator.html",
+              "RelativeToolTip": "Calculator.html",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAACoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-15T10:16:38.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "cart.html",
+              "DocumentMoniker": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\cart.html",
+              "RelativeDocumentMoniker": "cart.html",
+              "ToolTip": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\cart.html",
+              "RelativeToolTip": "cart.html",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAiwGMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-15T10:16:38.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContactUs.html",
+              "DocumentMoniker": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\ContactUs.html",
+              "RelativeDocumentMoniker": "ContactUs.html",
+              "ToolTip": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\ContactUs.html",
+              "RelativeToolTip": "ContactUs.html",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-15T10:16:38.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AboutUs.html",
+              "DocumentMoniker": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\AboutUs.html",
+              "RelativeDocumentMoniker": "AboutUs.html",
+              "ToolTip": "C:\\Users\\A257528\\source\\repos\\Room-1-dot\\Room1.sites\\AboutUs.html",
+              "RelativeToolTip": "AboutUs.html",
+              "ViewState": "AQIAACgAAAAAAAAAAABBwCwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-15T10:16:38.123Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
