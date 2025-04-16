@@ -1,55 +1,154 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About2</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Car Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 70px;
             color: #333;
-            padding-top: 60px;
         }
 
-        h1 {
-            font-size: 2.5em;
-            color: #555;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .about-content {
-            text-align: center;
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
             padding: 20px;
+            text-align: center;
         }
 
-            .about-content p {
-                font-size: 1.2em;
-                line-height: 1.6;
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                text-shadow: 1px 1px 3px #000;
             }
 
+        .navbar {
+            background-color: #222;
+        }
+
+        .about-section {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+            color: #222;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px #ccc;
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #444;
+        }
+
         .team-member {
-            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
             .team-member img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                border-radius: 30%;
+                object-fit: cover;
+                margin-bottom: 10px;
             }
 
             .team-member h4 {
                 margin-top: 10px;
+                font-size: 1rem;
+                color: #222;
             }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 15px;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+            footer h5 {
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #f8f9fa;
+            }
+
+            footer p {
+                margin-bottom: 5px;
+                color: #ddd;
+                line-height: 1.5;
+            }
+
+            footer a {
+                color: #bbb;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    color: #fff;
+                }
+
+        .social-icons {
+            margin: 10px 0;
+        }
+
+            .social-icons a {
+                font-size: 18px;
+                margin: 0 8px;
+                color: #bbb;
+            }
+
+                .social-icons a:hover {
+                    color: #fff;
+                }
+
+        .footer-bottom {
+            margin-top: 15px;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <br />
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Car Store</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -62,35 +161,65 @@
         </div>
     </nav>
 
-    <div class="container about-content">
-        <h1>About Us</h1>
-        <p>Welcome to Car Store, your trusted partner in finding the perfect car. Whether you're looking for a brand-new car or a pre-owned vehicle, we have a wide selection of cars to suit every need and budget. We aim to provide our customers with top-notch service and unbeatable deals.</p>
+    <div class="container about-section">
+        <p>Welcome to <strong>Car Store</strong>, your reliable partner in discovering the perfect vehicle. We specialize in offering a wide variety of vehicles—both new and pre-owned—to cater to different lifestyles and budgets. Our goal is to provide a seamless and transparent car buying experience backed by expert guidance and customer-first values.</p>
 
         <h3>Our Mission</h3>
-        <p>Our mission is simple: to make buying your next car an easy, enjoyable, and transparent process. We offer a wide range of vehicles, from affordable everyday cars to luxurious models, all backed by a team of experts who are passionate about cars.</p>
-        <h3>Our Team</h3>
-        <div class="row">
+        <p>Our mission is to revolutionize the car buying process by making it simpler, more transparent, and truly customer-centric. We are committed to providing high-quality cars, competitive pricing, and dedicated support that helps you drive away with confidence.</p>
+
+        <h3>Meet the Team</h3>
+        <div class="row justify-content-center">
             <div class="col-md-4 team-member">
-                <img src="https://th.bing.com/th/id/R.7b528d6309ee84dc0d8fbffef7cc9347?rik=2yRGcUoANndcJQ&riu=http%3a%2f%2fclipart-library.com%2fimages%2fpT7K76y8c.jpg&ehk=DzUoQ28TD73H6PKsFR8wgmg6uljiKEGEuc1oN0pKQj0%3d&risl=&pid=ImgRaw&r=0" alt="Team Member 1">
+                <img src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user.png" alt="Bereng Rasunyane">
                 <h4>Bereng Rasunyane</h4>
-                <p></p>
             </div>
             <div class="col-md-4 team-member">
-                <img src="https://th.bing.com/th/id/R.7b528d6309ee84dc0d8fbffef7cc9347?rik=2yRGcUoANndcJQ&riu=http%3a%2f%2fclipart-library.com%2fimages%2fpT7K76y8c.jpg&ehk=DzUoQ28TD73H6PKsFR8wgmg6uljiKEGEuc1oN0pKQj0%3d&risl=&pid=ImgRaw&r=0" alt="Team Member 2">
+                <img src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user.png" alt="Thuto Sethoga">
                 <h4>Thuto Sethoga</h4>
-                <p></p>
             </div>
             <div class="col-md-4 team-member">
-                <img src="https://th.bing.com/th/id/R.7b528d6309ee84dc0d8fbffef7cc9347?rik=2yRGcUoANndcJQ&riu=http%3a%2f%2fclipart-library.com%2fimages%2fpT7K76y8c.jpg&ehk=DzUoQ28TD73H6PKsFR8wgmg6uljiKEGEuc1oN0pKQj0%3d&risl=&pid=ImgRaw&r=0" alt="Team Member 3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgr403c4lNK5KOj-azSS6wF3pjDn1sPLDwH1za9akxa-ZoYGOZoXIBW45solrkKbDXTJ8&usqp=CAU" alt="Lehlogonolo Phiri">
                 <h4>Lehlogonolo Phiri</h4>
-                <p></p>
             </div>
             <div class="col-md-4 team-member">
-                <img src="https://th.bing.com/th/id/R.7b528d6309ee84dc0d8fbffef7cc9347?rik=2yRGcUoANndcJQ&riu=http%3a%2f%2fclipart-library.com%2fimages%2fpT7K76y8c.jpg&ehk=DzUoQ28TD73H6PKsFR8wgmg6uljiKEGEuc1oN0pKQj0%3d&risl=&pid=ImgRaw&r=0" alt="Team Member 3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgr403c4lNK5KOj-azSS6wF3pjDn1sPLDwH1za9akxa-ZoYGOZoXIBW45solrkKbDXTJ8&usqp=CAU" alt="Bontle Mofokeng">
                 <h4>Bontle Mofokeng</h4>
-                <p></p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="https://cdn0.iconfinder.com/data/icons/IS_CMS/256/user.png" alt="Sfiso Mankune">
+                <h4>Sfiso Mankune</h4>
             </div>
         </div>
     </div>
 
+    <br />
+    <br />
+
+
+    <footer>
+        <div class="container text-center">
+            <h5>Car Store</h5>
+            <p>Delivering excellence in automotive solutions.</p>
+            <p>Wide selection. Expert guidance. Trusted service.</p>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <p><strong>Contact:</strong> info@carstore.com | +27 11 234 5678</p>
+
+            <div class="footer-bottom">
+                &copy; 2025 Car Store. All rights reserved. | Powered by Innovation.
+            </div>
+        </div>
+    </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,208 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finance Calculator</title>
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
- 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Finance Calculator</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        * {
-            box-sizing: border-box;
-        }
- 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d')
-            ;
+            background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
- 
-            body::before {
-                content: '';
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.6);
-                z-index: -1;
-            }
- 
-        .navbar {
-            background-color: #1e1e1e;
-        }
- 
-        .container {
-            width: 90%;
-            max-width: 500px;
-            background-color: #ffffff;
+            padding-top: 70px;
+            font-family: 'Poppins', sans-serif;
             color: #333;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            margin: 40px auto;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
- 
-        h1 {
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: #2c3e50;
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                text-shadow: 1px 1px 3px #000;
+            }
+
+        .navbar {
+            background-color: #222;
         }
- 
+
+        .calculator-section {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
         label {
-            font-weight: 500;
-            margin-top: 15px;
-            display: block;
-            text-align: left;
+            font-weight: 600;
         }
- 
-        input {
-            width: 100%;
-            padding: 12px;
-            font-size: 1em;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            margin-top: 5px;
-            margin-bottom: 10px;
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
         }
- 
-            input:focus {
-                border-color: #3498db;
-                outline: none;
+
+            .form-group label {
+                flex: 1;
+                margin-bottom: 0;
             }
- 
-        button {
-            width: 48%;
-            padding: 10px;
-            font-size: 1.1em;
+
+            .form-group .form-control {
+                flex: 2;
+            }
+
+        .btn-primary,
+        .btn-secondary {
             border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s ease;
+            width: 48%;
+            font-weight: 600;
         }
- 
-        .btn-calc {
-            background-color: #2c3e50;
-            color: white;
+
+        .btn-primary {
+            background-color: #333;
         }
- 
-            .btn-calc:hover {
-                background-color: #1e1e1e;
+
+            .btn-primary:hover {
+                background-color: #000;
             }
- 
-        .btn-clear {
-            background-color: #e74c3c;
-            color: white;
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
         }
- 
-            .btn-clear:hover {
-                background-color: #c0392b;
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
             }
- 
+
+        .results {
+            margin-top: 25px;
+        }
+
+            .results h5 {
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
         #monthlyPayment {
+            font-size: 1.5rem;
             font-weight: bold;
-            font-size: 1.5em;
-            color: #e67e22;
+            color: #28a745;
         }
-</style>
+
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 0.85em;
+            text-align: center;
+            font-style: italic;
+            color: #555;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 15px;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+            footer h5 {
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #f8f9fa;
+            }
+
+            footer p {
+                margin-bottom: 5px;
+                color: #ddd;
+                line-height: 1.5;
+            }
+
+            footer a {
+                color: #bbb;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    color: #fff;
+                }
+
+        .social-icons {
+            margin: 10px 0;
+        }
+
+            .social-icons a {
+                font-size: 18px;
+                margin: 0 8px;
+                color: #bbb;
+            }
+
+                .social-icons a:hover {
+                    color: #fff;
+                }
+
+        .footer-bottom {
+            margin-top: 15px;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+    </style>
 </head>
 <body>
- 
-    <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-<a class="navbar-brand" href="#">Car Finance</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item">
-<a class="nav-link" href="Home.html">Home</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="ContactUs.html">Contact US</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="AboutUs.html">About Us</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="cart.html">
-<i class="fas fa-shopping-cart"></i> Cart
-</a>
-</li>
-</ul>
-</div>
-</nav>
- 
- 
-    <div class="container">
-<h1>Finance Calculator</h1>
-<form id="financeForm">
-<label for="loanAmount">Loan Amount (R):</label>
-<input type="number" id="loanAmount" placeholder="Enter loan amount" required>
- 
-            <label for="interestRate">Annual Interest Rate (%):</label>
-<input type="number" id="interestRate" placeholder="Enter interest rate" required>
- 
-            <label for="loanTerm">Loan Term (Months):</label>
-<input type="number" id="loanTerm" placeholder="Enter loan term" required>
- 
-            <div class="d-flex justify-content-between mt-3">
-<button type="button" class="btn-calc" onclick="calculateFinance()">Calculate</button>
-<button type="button" class="btn-clear" onclick="clearForm()">Clear</button>
-</div>
-</form>
- 
-        <h2 class="mt-4">Monthly Payment:<br /><span>R <span id="monthlyPayment">0.00</span></span></h2>
-</div>
- 
+
+
+    <header>
+        <h1>Finance Calculator</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Car Finance</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Calculator Section -->
+    <div class="calculator-section mt-4">
+        <form id="financeForm">
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount (R):</label>
+                <input type="number" id="loanAmount" class="form-control" placeholder="e.g. 150000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="number" id="interestRate" class="form-control" placeholder="e.g. 10.5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loanTerm">Loan Term (Months):</label>
+                <input type="number" id="loanTerm" class="form-control" placeholder="e.g. 60" required>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="calculateFinance()">Calculate</button>
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+
+        <div class="results mt-4">
+            <div class="form-group">
+                <label for="monthlyPayment">Monthly Payment (R):</label>
+                <input type="text" id="monthlyPayment" class="form-control" value="R 0.00" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="totalInterest">Total Interest (R):</label>
+                <input type="text" id="totalInterest" class="form-control" value="R 0.00" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="totalPayment">Total Payment (R):</label>
+                <input type="text" id="totalPayment" class="form-control" value="R 0.00" readonly>
+            </div>
+        </div>
+
+
+        <p class="disclaimer">
+            * These calculations are estimates and are subject to credit approval. They exclude fees such as registration and licensing. Please consult your finance provider for accurate offers.
+        </p>
+    </div>
+
+    <br />
+    <br />
+
+
+    <footer>
+        <div class="container text-center">
+            <h5>Car Store</h5>
+            <p>Delivering excellence in automotive solutions.</p>
+            <p>Wide selection. Expert guidance. Trusted service.</p>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <p><strong>Contact:</strong> info@carstore.com | +27 11 234 5678</p>
+
+            <div class="footer-bottom">
+                &copy; 2025 Car Store. All rights reserved. | Powered by Innovation.
+            </div>
+        </div>
+    </footer>
+
+
     <!-- JavaScript -->
-<script>
-        function calculateFinance() {
-            const loanAmount = parseFloat(document.getElementById("loanAmount").value);
-            const interestRate = parseFloat(document.getElementById("interestRate").value) / 100 / 12;
-            const loanTerm = parseInt(document.getElementById("loanTerm").value);
- 
-            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm) || loanTerm <= 0) {
-                alert("Please enter valid finance details.");
-                return;
-            }
- 
-            let monthlyPayment;
-            if (interestRate === 0) {
-                monthlyPayment = loanAmount / loanTerm;
-            } else {
-                monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
-            }
- 
-            document.getElementById("monthlyPayment").innerText = monthlyPayment.toFixed(2);
-        }
- 
-        function clearForm() {
-            document.getElementById("loanAmount").value = '';
-            document.getElementById("interestRate").value = '';
-            document.getElementById("loanTerm").value = '';
-            document.getElementById("monthlyPayment").innerText = '0.00';
-        }
-</script>
- 
-    <!-- Bootstrap Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    function calculateFinance() {
+      const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+      const interestRate = parseFloat(document.getElementById("interestRate").value) / 100 / 12;
+      const loanTerm = parseInt(document.getElementById("loanTerm").value);
+
+      if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)) {
+        alert("Please enter all values correctly.");
+        return;
+      }
+
+      let monthlyPayment = 0;
+      if (interestRate === 0) {
+        monthlyPayment = loanAmount / loanTerm;
+      } else {
+        monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
+      }
+
+      const totalPayment = monthlyPayment * loanTerm;
+      const totalInterest = totalPayment - loanAmount;
+
+      document.getElementById("monthlyPayment").value = "R " + monthlyPayment.toFixed(2);
+      document.getElementById("totalInterest").value = "R " + totalInterest.toFixed(2);
+      document.getElementById("totalPayment").value = "R " + totalPayment.toFixed(2);
+
+    }
+
+    function clearForm() {
+      document.getElementById("loanAmount").value = '';
+      document.getElementById("interestRate").value = '';
+      document.getElementById("loanTerm").value = '';
+      document.getElementById("monthlyPayment").value = "R 0.00";
+      document.getElementById("totalInterest").value = "R 0.00";
+      document.getElementById("totalPayment").value = "R 0.00";
+
+    }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
